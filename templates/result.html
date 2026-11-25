@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusIQ - Processed Notice</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">CampusIQ</div>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Your Notice Has Been Processed!</h1>
+            <p>Here is the text extracted from your college notice.</p>
+        </section>
+
+        <section class="results">
+
+            <h2>Notice Category</h2>
+
+<div class="notice-text">
+    {{ notice_category }}
+</div>
+
+            <h2>Original Notice Text</h2>
+
+            <div class="notice-text">
+                {{ extracted_text }}
+            </div>
+
+            {% if translated_text %}
+
+    <h2>Translated Notice</h2>
+
+    <div class="notice-text">
+        {{ translated_text }}
+    </div>
+
+{% endif %}
+
+            <h2>Simplified Notice</h2>
+
+            <div class="notice-text">
+                {{ simplified_text }}
+            </div>
+
+            <h2>Important Dates</h2>
+
+<div class="notice-text">
+    {% if dates %}
+        <ul>
+            {% for date in dates %}
+                <li>{{ date }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dates found in this notice.</p>
+    {% endif %}
+</div>
+
+<h2>Important Information</h2>
+
+<div class="notice-text">
+    {% if important_sentences %}
+        <ul>
+            {% for sentence in important_sentences %}
+                <li>{{ sentence }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No specific important information found.</p>
+    {% endif %}
+</div>
+
+<h2>Additional Important Details</h2>
+
+<div class="notice-text">
+    {% if important_details %}
+        <ul>
+            {% for detail in important_details %}
+                <li>{{ detail }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No additional details found.</p>
+    {% endif %}
+</div>
+
+
+
+            <a href="/">
+                <button type="button">Upload Another Notice</button>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CampusIQ | Making Every College Notice Easy to Understand.</p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusIQ - College Notice Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">CampusIQ</div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+           <h1>Your College Notices, Simplified.</h1>
+
+<p>
+    Never miss an important college update again.
+    Upload your notice, extract key information, identify important dates,
+    and make college communication easier with CampusIQ.
+</p>
+
+        </section>
+
+
+        <!-- Upload Section -->
+        <section class="upload-card">
+
+            <h2>Upload Your College Notice</h2>
+
+            <p>Upload a PDF college notice to get started.</p>
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+
+                <input
+                    type="file"
+                    name="notice"
+                    id="noticeFile"
+                    accept=".pdf"
+                    required
+                >
+
+                <h3>Select Your Preferred Language</h3>
+
+                <select name="language" id="language">
+
+                    <option value="English">English</option>
+
+                    <option value="Hindi">Hindi</option>
+
+                    <option value="Marathi">Marathi</option>
+
+                </select>
+
+                <br>
+
+                <button type="submit">
+                    Process Notice
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Information Section -->
+        <section class="results">
+
+            <h2>What is CampusIQ?</h2>
+
+            <p>
+                CampusIQ helps students understand official college notices
+                through text extraction, language simplification and
+                multilingual translation.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="about">
+
+        <p>
+            CampusIQ | Making Every College Notice Easy to Understand.
+        </p>
+
+    </footer>
+
+</body>
+</html>

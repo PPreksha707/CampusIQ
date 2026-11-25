@@ -1,0 +1,238 @@
+
+/* General Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1e293b;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    background-color: #102a43;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+
+/* Main Heading */
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #102a43;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* Upload Card */
+
+.upload-card {
+    background-color: white;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+.upload-card h2 {
+    color: #102a43;
+}
+
+.upload-card p {
+    color: #64748b;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px dashed #94a3b8;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+select {
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background-color: white;
+    font-size: 15px;
+}
+
+
+/* Process Button */
+
+button {
+    background-color: #087e8b;
+    color: white;
+    padding: 14px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #06636d;
+}
+
+
+/* Results Section */
+
+.results {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.results h2 {
+    color: #102a43;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #102a43;
+    color: white;
+}
+
+.notice-text {
+    text-align: left;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.8;
+    color: #334155;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* CampusIQ Professional Design */
+
+/* Main Results Layout */
+
+.results {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.results h2 {
+    font-size: 22px;
+    margin-top: 35px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* Notice Content */
+
+.notice-text {
+    border: 1px solid #e2e8f0;
+    font-size: 15px;
+}
+
+/* Translation Form */
+
+.results form {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.results label {
+    font-weight: bold;
+    color: #334155;
+}
+
+/* Important Information Lists */
+
+.results ul {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+.results li {
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+
+button {
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(8, 126, 139, 0.2);
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 700px) {
+
+    .results {
+        margin: 20px 12px;
+        padding: 22px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .results h2 {
+        font-size: 19px;
+    }
+}
